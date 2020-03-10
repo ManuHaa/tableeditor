@@ -1,0 +1,38 @@
+[
+    {
+        "firstname":"daniel",
+        "lastname":"quili",
+        "company" : "porsche",
+        "role" : "masterchief",
+        "address" : "baumallee 47",
+        "city" : "sincity",
+        "postcode" : "66612",
+        "email":"dquili@evilcorp.com",
+        "phone" : "+49 555 123",
+        "gender":"male"
+    },
+    {
+        "firstname":"manuel",
+        "lastname":"h",
+        "company" : "bugatti",
+        "role" : "trainee",
+        "address" : "reperbahn 1",
+        "city" : "hamburg",
+        "postcode" : "20095",
+        "email":"manuh@bugatti.com",
+        "phone" : "+49 174 123",
+        "gender":"male"
+    },
+    {
+        "firstname":"max",
+        "lastname":"mustermann",
+        "company" : "lufthansa",
+        "role" : "ceo",
+        "address" : "tegernsee 2",
+        "city" : "munich",
+        "postcode" : "80331",
+        "email":"max@lhansa.com",
+        "phone" : "+49 123 456",
+        "gender":"any"
+    }
+]

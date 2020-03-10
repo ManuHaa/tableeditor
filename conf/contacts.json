@@ -1,0 +1,67 @@
+[
+    {
+        "col":"firstname",
+        "hl":"Firstname",
+        "type":"text",
+        "align":"left"
+    },
+    {
+        "col":"lastname",
+        "hl":"Last Name",
+        "type":"text",
+        "align":"left"
+    },
+    {
+        "col":"company",
+        "hl":"Company",
+        "type":"text",
+        "align":"left"
+    },
+    {
+        "col":"role",
+        "hl":"Role",
+        "type":"select",
+        "align":"left",
+        "options":["","",""]
+    },
+    {
+        "col":"address",
+        "hl":"Address",
+        "type":"text",
+        "align":"left"
+    },
+    {
+        "col":"city",
+        "hl":"City",
+        "type":"text",
+        "align":"left"
+    },
+    {
+        "col":"postcode",
+        "hl":"Postcode",
+        "type":"numeric",
+        "align":"left",
+        "pattern":"[0-9]{5} " 
+    },
+    {
+        "col":"email",
+        "hl":"Email",
+        "type":"text",
+        "align":"left",
+        "pattern":"/^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$/" 
+    },
+    {
+        "col":"phone",
+        "hl":"Phone",
+        "type":"numeric",
+        "align":"left",
+        "pattern": "[\\+]\\d{2}[\\(]\\d{2}[\\)]\\d{4}[\\-]\\d{4"
+    },
+    {
+        "col":"gender",
+        "hl":"Gender",
+        "type":"select",
+        "align":"left",
+        "options":["male","female","any"]
+    }
+]
