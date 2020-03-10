@@ -15,17 +15,23 @@
                     {{ defi['hl'] }}                            <!-- wird mit dem in conf definierten hl-Parameter (in data dann fesgelt) erzeugt-->
                 </th>
             {% endfor %}
-
-            {% for row in tableData %}                                      <!-- für jede Reihe in tableData -->
+                <th>option</th>
+            
+            {% for row in tableData %}  
+            {% set i=loop.index-1 %}                                    <!-- für jede Reihe in tableData -->
                 <tr id="tr">                                                        <!-- wird eine Reihe erzeugt -->
                     {% for defi in tableDef %}                              <!-- und für diese wiederum wird für jede Definition aus tableDef-->
                         <td id="cells" style="text-align: {{ defi['align'] }};">       <!-- das Align für den Text übernommen,-->
                             {{ row[ defi['col'] ] }}                        <!-- jede Zelle mit der Definition der Spalte ausgezeichnet-->
                         </td>
                     {% endfor %}
-
+                        <td style="position: relative;">
+                            <button class="actionBtn" onclick="actionmenu_call(this.parentNode,{{ i }})">action</button>
+                          <!--button style="position:absolute; top:10px; left:100px;">test</button-->
+                        </td>
                     
                 </tr>
+               
             {% endfor %}
         </tr>
     </table>

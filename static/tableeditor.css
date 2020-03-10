@@ -74,3 +74,49 @@
     order: 1;
     flex-shrink: 2;
 }
+
+.actionBtn{
+    width: 100px;
+    padding: 6px;
+    margin: -6px 0px -6px 0px;
+    text-align: center;
+    color: white;
+    background-color: rgb(80, 80, 156);
+    font-size: 11px;
+    font-weight: bold;
+    border: #444 1px solid;
+    border-radius: 6px;
+    cursor: pointer;
+
+}
+.actionBtn:hover{
+    background-color: rgb(40, 40, 90);
+}
+
+.menuBox{
+    position: absolute;
+    left: 120px;
+    top: 2px;
+    display: inline-block;
+    width: 80px;
+    padding: 0;
+    margin: 0;
+    z-index: 2;
+}
+
+.menuBox div{
+    padding: 6px;
+    text-align: center;
+    margin: -1px;
+    color: white;
+    background-color: rgb(80, 80, 156);
+    font-size: 11px;
+    font-weight: bold;
+    border: #222 1px solid;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.menuBox div:hover{
+    background-color: rgb(40, 40, 90);
+}
