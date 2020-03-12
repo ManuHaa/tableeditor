@@ -1,0 +1,47 @@
+<h1>copy content</h1>
+
+<!-- base.html wird abgerufen und in die Seite eingebaut (kann unabhängig von table.html verändert werden)-->
+{% extends 'base.html' %}
+
+<!-- ? -->
+{{ tableDef | safe }}
+
+<!-- Struktur der Tabelle wird festgelegt in block content-->
+{% block content %}
+<div id="content">
+<div id="table">
+    <table class="stdTable">
+        <tr>                                                    <!-- table-rows -->
+            {% for defi in tableDef %}                          <!-- für jede Definition aus tableDef (conf/contacts.json)-->
+                <th style="text-align: {{ defi['align'] }};">   <!-- wird mit dem in conf notierten align ausgezeichnet, -->
+                    {{ defi['hl'] }}                            <!-- wird mit dem in conf definierten hl-Parameter (in data dann fesgelt) erzeugt-->
+                </th>
+            {% endfor %}
+                <th>option</th>
+            
+            {% for row in tableData %}                                              <!-- für jede Reihe in tableData -->
+            {% set i=loop.index-1 %}                                                <!-- Schleife, -1 aufgrund richtigem Index -->
+                <tr id="tr">                                                        <!-- wird eine Reihe erzeugt -->
+                    {% for defi in tableDef %}                                      <!-- und für diese wiederum wird für jede Definition aus tableDef-->
+                        <td id="cells" style="text-align: {{ defi['align'] }};">    <!-- das Align für den Text übernommen,-->
+                            {{ row[ defi['col'] ] }}                                <!-- jede Zelle mit der Definition der Spalte ausgezeichnet-->
+                        </td>
+                    {% endfor %}
+                        <td style="position: relative;">                            <!-- relative Position: layout der anderen Elemente wird nicht verändert wenn sich das Menü öffnet-->
+                            <button class="actionBtn" onclick="copyContent();actionmenu_call(this.parentNode,{{ i }})">action</button> <!-- öffnet das Actionmenü mit dessen Unterkategorien -->
+                            
+                            <!--button style="position:absolute; top:10px; left:100px;">test</button-->
+                        </td>
+                    
+                </tr>
+               
+            {% endfor %}
+        </tr>
+    </table>
+</div>
+<div id="buttons">
+    <!--button id="editBtns" onclick="editTable()">edit</button-->
+    <!--button id="saveBtns" onclick="saveEdit()" style="visibility: hidden;">save</button-->
+</div>
+</div>
+{% endblock %}
