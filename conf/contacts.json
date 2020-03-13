@@ -3,7 +3,15 @@
         "col":"firstname",
         "hl":"Firstname",
         "type":"text",
-        "align":"left"
+        "align":"left",
+        "placeholder":"bitte geben sie Ihren Vornamen ein"
+    },
+    {
+        "col":"haustier",
+        "hl":"Haustier",
+        "type":"text",
+        "align":"left",
+        "placeholder":"bitte geben sie Idie Tierart Ihres Haustieres ein"
     },
     {
         "col":"lastname",
